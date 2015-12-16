@@ -1,0 +1,19 @@
+body {
+	background-color: #f1c40f;
+}
+
+.container {
+/*	max-width: 800px;
+	margin: 0 auto;*/
+	margin-top: 2.5%;
+}
+
+table.centered {
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+h1.ui.center.aligned.header {
+	margin-top: 2.5%;
+	/*margin: 0 auto;*/
+}

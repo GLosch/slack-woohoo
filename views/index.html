@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Woohoo</title>
+	<link rel="stylesheet" href="./stylesheets/semantic.css">
+	<link rel="stylesheet" href="./stylesheets/style.css">
+</head>
+<body>
+	<h1 class="ui center aligned header">Woohoo-ers</h1>
+
+	<div class="ui container">
+		<table class="ui striped table">
+		  <thead>
+		    <tr><th>Slacker</th>
+		    <th>Instance of "Woohoo"</th>
+		    <th>Link</th>
+		  </tr></thead>
+		  <tbody>
+		  	{{#message}}
+		    <tr>
+		      <td>
+		        <h4 class="ui header">
+		          <div class="content">
+		            {{username}}
+		          </div>
+		        </div>
+		      </h4></td>
+		      <td>
+		        {{text}}
+		      </td>
+		      <td>
+		        <a href={{link}}>Link</a>
+		      </td>
+		    </tr>
+		    {{/message}}
+		  </tbody>
+		</table>
+	</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
+</body>
+</html>

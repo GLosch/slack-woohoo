@@ -1,0 +1,26 @@
+{
+  "name": "woohoo",
+  "version": "0.0.1",
+  "description": "find instances of 'woohoo' in Slack chats",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "slack"
+  ],
+  "author": "Gabby Losch",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "fs": "0.0.2",
+    "jquery": "^2.1.4",
+    "mustache": "^2.2.1",
+    "request": "^2.67.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.8.1"
+  }
+}
