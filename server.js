@@ -1,19 +1,18 @@
 var express = require('express');
 var app = express();
 var fs = require('fs');
+require('dotenv').config({path: './config/config.env'});
 var request = require('request');
 var bodyParser = require('body-parser');
 var Mustache = require('mustache');
 app.use(express.static('public'));
-app.use(bodyParser.urlencoded({ extended: false }))
-app.use('jquery', express.static(__dirname + '/node_modules/jquery/dist/'));
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get('/', function(req, res){
 	var html = fs.readFileSync("./views/index.html", "utf8");
-	request.get('https://slack.com/api/search.messages?query=:woohoo:&token=xoxp-16757291844-16762281921-16762613457-2327525d4e', function(err, resp, body){
+	request.get('https://slack.com/api/search.messages?query=:woohoo:&token=' + process.env['API_KEY'], function(err, resp, body){
 			if (!err){
 				var results = JSON.parse(body);
-				console.log(results);
 			  Mustache.parse(html);
 			  var stachBlock = [];
 			  results.messages.matches.forEach(function(e){
@@ -30,8 +29,6 @@ app.get('/', function(req, res){
 var port = process.env.PORT || 3000;
 
 var server = app.listen(port, function () {
-  var host = server.address().address;
   var port = server.address().port;
-
-  console.log('Listening at http://%s:%s', host, port);
+  console.log('Listening at http://localhost:%s', port);
 });

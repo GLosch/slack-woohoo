@@ -3,8 +3,6 @@ body {
 }
 
 .container {
-/*	max-width: 800px;
-	margin: 0 auto;*/
 	margin-top: 2.5%;
 }
 
@@ -15,5 +13,4 @@ table.centered {
 
 h1.ui.center.aligned.header {
 	margin-top: 2.5%;
-	/*margin: 0 auto;*/
 }
